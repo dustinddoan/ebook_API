@@ -2,3 +2,8 @@ language: java
 jdk:
   - openjdk17
 
+deploy: &heroku
+  provider: heroku
+  skip_cleanup: true
+  app: ebook-app
+  api_key: $HEROKU_AUTH_TOKEN
